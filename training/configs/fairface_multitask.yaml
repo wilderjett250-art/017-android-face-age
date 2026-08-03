@@ -1,0 +1,18 @@
+dataset_root: E:\workproject\nannv\data\fairface\images_025
+train_csv: E:\workproject\nannv\data\fairface\fairface_label_train.csv
+val_csv: E:\workproject\nannv\data\fairface\fairface_label_val.csv
+output_dir: E:\workproject\anzhuoface\training\artifacts\fairface_multitask
+
+image_size: 128
+batch_size: 128
+epochs: 8
+num_workers: 4
+learning_rate: 0.001
+weight_decay: 0.0001
+age_loss_weight: 1.0
+gender_loss_weight: 0.4
+use_pretrained: true
+freeze_backbone_epochs: 1
+max_train_samples: 12000
+max_val_samples: 3000
+seed: 42

@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">安卓人脸年龄估计</string>
+    <string name="app_title">Android 人脸年龄估计系统</string>
+    <string name="app_subtitle">支持相册导入、拍照识别和样例演示，支持标准版与轻量版模型切换测试，端侧完成人脸检测、图像预处理与年龄估计。</string>
+    <string name="model_selector_title">模型选择</string>
+    <string name="model_standard_name">标准版模型</string>
+    <string name="model_lite_name">轻量版模型</string>
+    <string name="pick_image">选择图片</string>
+    <string name="take_photo">拍照识别</string>
+    <string name="use_sample">演示样例</string>
+    <string name="clear_history">清空记录</string>
+    <string name="preview_image">待分析图片</string>
+    <string name="result_placeholder">等待导入图片或拍照。</string>
+    <string name="analyzing">正在检测人脸并估计年龄...</string>
+    <string name="no_face_found">未检测到清晰人脸，请更换正脸照片重试。</string>
+    <string name="load_failed">图片加载失败。</string>
+    <string name="capture_cancelled">拍照已取消。</string>
+    <string name="analyze_failed">分析失败：%1$s</string>
+    <string name="tip_idle">建议使用单人、正脸、光照均匀的照片，年龄估计会更稳定。</string>
+    <string name="tip_detecting">当前输入来源：%1$s，当前模型：%2$s。推理在本地完成，不依赖服务器。</string>
+    <string name="tip_success">当前结果来自 %1$s，绿色框选区域为检测到的人脸，标签显示年龄段与折算年龄。</string>
+    <string name="tip_retry">可重新拍照、选择图片或使用演示样例再次测试。</string>
+    <string name="history_title">识别历史</string>
+    <string name="history_empty">暂无识别历史。</string>
+    <string name="history_cleared">历史记录已清空。</string>
+    <string name="history_error_summary">推理异常</string>
+    <string name="source_gallery">相册图片</string>
+    <string name="source_camera">拍照输入</string>
+    <string name="source_sample">演示样例</string>
+    <string name="metrics_placeholder">性能指标：等待开始识别。</string>
+    <string name="metrics_placeholder_model">性能指标：当前模型=%1$s，等待开始识别。</string>
+    <string name="metrics_running">性能指标：当前模型=%1$s，正在执行端侧检测与推理。</string>
+    <string name="metrics_failed">性能指标：当前模型=%1$s，本次分析未完成，请重新测试。</string>
+    <string name="metrics_template">性能指标：模型=%1$s，来源=%2$s，输入=%3$dx%4$d，人脸数=%5$d，总耗时=%6$d ms</string>
+    <string name="pipeline_placeholder">处理流程：等待输入 -&gt; 人脸检测 -&gt; 图像预处理 -&gt; 年龄估计 -&gt; 结果展示</string>
+    <string name="pipeline_placeholder_model">处理流程：当前模型=%1$s，标准输入=%2$d x %2$d，等待输入。</string>
+    <string name="pipeline_state_running">运行中</string>
+    <string name="pipeline_state_finished">已完成</string>
+    <string name="pipeline_template">处理流程：状态=%1$s；模型=%2$s；输入源=%3$s；原图尺寸=%4$dx%5$d；预处理=人脸裁剪 + %6$dx%6$d 统一输入；模型部署=OpenCV DNN 本地加载</string>
+    <string name="system_title">系统设计体现</string>
+    <string name="system_intro">依据任务书与参考材料，系统需要体现 Android 平台、检测预处理、模型部署、端侧推理、轻量化方案、性能统计与测试记录几个关键环节。</string>
+    <string name="model_summary">等待模型信息加载。</string>
+    <string name="model_summary_template">当前模型：%1$s\n主干网络：%2$s\n训练数据集：%3$s\n输入尺寸：%4$d x %4$d\n训练策略：%5$s\n年龄段准确率：%6$s\n相邻年龄段容错准确率：%7$s\n中点代理 MAE：%8$s\n中点代理 CS(5)：%9$s\n模型体积：%10$s\n轻量化说明：%11$s</string>
+    <string name="module_title_1">模块一：输入与采集</string>
+    <string name="module_desc_1">系统支持相册图片、现场拍照和样例图三种输入方式，对应论文中的数据输入与系统交互部分。</string>
+    <string name="module_title_2">模块二：人脸检测与预处理</string>
+    <string name="module_desc_2">通过端侧人脸检测获取人脸框，再完成裁剪、尺寸统一和颜色空间转换，体现图像预处理模块的系统设计。</string>
+    <string name="module_title_3">模块三：模型部署与推理</string>
+    <string name="module_desc_3">系统同时集成标准版和轻量版模型，可在移动端本地切换测试，直观展示精度优先与轻量优先两条部署思路。</string>
+    <string name="module_title_4">模块四：结果展示与性能统计</string>
+    <string name="module_desc_4">系统输出年龄段、置信度、输入尺寸、人脸数和推理耗时，用于体现论文中的结果展示与性能分析部分。</string>
+    <string name="module_title_5">模块五：测试记录与论文支撑</string>
+    <string name="module_desc_5">最近识别历史保存来源、模型、状态、耗时和结果摘要，可直接支撑论文中的系统测试与结果分析章节。</string>
+    <string name="testing_summary_empty">测试摘要：暂无运行记录。</string>
+    <string name="testing_summary_template">测试摘要：总记录=%1$d，成功次数=%2$d，平均耗时=%3$d ms，平均检测人脸数=%4$s</string>
+</resources>

@@ -1,0 +1,37 @@
+data_sources:
+  - name: fairface
+    dataset_root: E:\workproject\nannv\data\fairface\images_025
+    train_csv: E:\workproject\nannv\data\fairface\fairface_label_train.csv
+    val_csv: E:\workproject\nannv\data\fairface\fairface_label_val.csv
+    source_weight: 1.0
+
+output_dir: E:\workproject\anzhuoface\training\artifacts\fairface_asian_bias
+
+backbone: mobilenet_v3_large
+image_size: 160
+batch_size: 96
+epochs: 10
+num_workers: 4
+learning_rate: 0.00045
+min_learning_rate: 0.00001
+weight_decay: 0.0001
+age_ce_weight: 1.0
+age_kl_weight: 0.8
+age_reg_weight: 0.3
+gender_loss_weight: 0.4
+age_label_sigma: 6.0
+dropout: 0.3
+use_pretrained: true
+freeze_backbone_epochs: 1
+persistent_workers: true
+max_train_samples: 36000
+max_val_samples: 9000
+seed: 42
+
+race_boosts:
+  East Asian: 2.3
+  Southeast Asian: 1.7
+
+gender_boosts:
+  Male: 1.1
+  Female: 1.0

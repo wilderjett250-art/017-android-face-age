@@ -1,0 +1,42 @@
+data_sources:
+  - name: fairface
+    dataset_root: E:\workproject\nannv\data\fairface\images_025
+    train_csv: E:\workproject\nannv\data\fairface\fairface_label_train.csv
+    val_csv: E:\workproject\nannv\data\fairface\fairface_label_val.csv
+    source_weight: 1.0
+
+output_dir: E:\workproject\anzhuoface\training\artifacts\fairface_mobilenetv2_dex_distill_smoke
+
+backbone: mobilenet_v2
+image_size: 160
+batch_size: 32
+epochs: 1
+num_workers: 2
+learning_rate: 0.0004
+min_learning_rate: 0.00001
+weight_decay: 0.0001
+age_ce_weight: 1.0
+age_kl_weight: 0.9
+age_reg_weight: 0.35
+gender_loss_weight: 0.25
+age_label_sigma: 6.0
+dropout: 0.25
+use_pretrained: true
+freeze_backbone_epochs: 0
+persistent_workers: false
+max_train_samples: 512
+max_val_samples: 256
+seed: 42
+
+teacher_checkpoint: E:\workproject\anzhuoface\training\artifacts\fairface_asian_bias\best.pt
+distill_temperature: 2.5
+distill_age_weight: 0.8
+distill_gender_weight: 0.2
+
+race_boosts:
+  East Asian: 2.3
+  Southeast Asian: 1.7
+
+gender_boosts:
+  Male: 1.1
+  Female: 1.0

@@ -1,0 +1,22 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+/build/
+/captures/
+/.externalNativeBuild/
+.cxx/
+app/build/
+
+# Local model-training outputs and exported experiment artifacts
+training/artifacts/
+**/__pycache__/
+*.pyc
+
+# Release binaries are published as GitHub Release assets, not Git blobs
+release/*.apk
+release/*.aab
+
+# Local reports and temporary runtime output
+output/
+tmp/

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_realtime_camera">实时视频</string>
+    <string name="camera_permission_denied">未授予相机权限，无法进入实时测试。</string>
+    <string name="source_camera_realtime">实时视频</string>
+    <string name="realtime_camera_title">实时视频检测</string>
+    <string name="realtime_camera_subtitle">前置相机连续预览，每 0.5 秒分析 1 帧；当前视频帧实时画框，最近 6 帧自动做稳定投票与择优。</string>
+    <string name="realtime_sampling_waiting">相机预览启动中，请稍候。</string>
+    <string name="realtime_sampling_running">实时视频分析中，建议保持单人正脸并稳定 0.5~1 秒。</string>
+    <string name="realtime_sampling_no_face">当前帧未检测到清晰人脸，系统会继续自动采样。</string>
+    <string name="realtime_best_result">最佳结果：%1$s，约 %2$d 岁，年龄置信度 %3$d%%，综合评分 %4$d%%</string>
+    <string name="realtime_current_result">当前帧：检测到 %1$d 张人脸，最近有效帧 %2$d 张，采样间隔 0.5 秒</string>
+    <string name="realtime_current_face_result">当前视频帧：%1$s，约 %2$d 岁，年龄置信度 %3$d%%，性别置信度 %4$d%%</string>
+    <string name="realtime_stable_result">稳定结果：%1$s，约 %2$d 岁，年龄置信度 %3$d%%，最近 %4$d 帧投票</string>
+    <string name="realtime_use_best_frame">使用最佳帧</string>
+    <string name="realtime_close">关闭</string>
+    <string name="realtime_no_best_frame">暂无可用结果，请继续保持人脸在画面中。</string>
+    <string name="realtime_model_badge">当前模型：%1$s</string>
+    <string name="realtime_multiple_faces">当前检测到多张人脸，请保留单人正脸以降低误检。</string>
+    <string name="realtime_small_face">当前人脸过小或偏远，请靠近镜头后再测试。</string>
+</resources>

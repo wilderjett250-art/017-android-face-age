@@ -1,0 +1,25 @@
+dataset_root: E:\workproject\nannv\data\fairface\images_025
+train_csv: E:\workproject\nannv\data\fairface\fairface_label_train.csv
+val_csv: E:\workproject\nannv\data\fairface\fairface_label_val.csv
+output_dir: E:\workproject\anzhuoface\training\artifacts\fairface_multitask_improved
+
+backbone: mobilenet_v3_large
+image_size: 160
+batch_size: 96
+epochs: 8
+num_workers: 4
+learning_rate: 0.0005
+min_learning_rate: 0.00001
+weight_decay: 0.0001
+age_ce_weight: 1.0
+age_kl_weight: 0.8
+age_reg_weight: 0.3
+gender_loss_weight: 0.2
+age_label_sigma: 6.0
+dropout: 0.3
+use_pretrained: true
+freeze_backbone_epochs: 1
+persistent_workers: true
+max_train_samples: 24000
+max_val_samples: 6000
+seed: 42
